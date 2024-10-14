@@ -1065,6 +1065,6 @@ webui.launch(
     show_api=False,
     server_name=host_url,
     server_port=args.port,
-    server_path=args.path,
+    root_path=args.path,
     share=args.share,
 )
