@@ -30,6 +30,15 @@ parser.add_argument(
     default=7860,
     help="Specify port to host the WebUI on (default 7860)",
 )
+
+parser.add_argument(
+    "-t",
+    "--path",
+    type=str,
+    default="/",
+    help="Path to serve from (default is root '/'",
+)
+
 parser.add_argument(
     "-l", "--listen", action="store_true", help="Share WebUI link via LAN"
 )
@@ -1056,5 +1065,6 @@ webui.launch(
     show_api=False,
     server_name=host_url,
     server_port=args.port,
+    server_path=args.path,
     share=args.share,
 )
